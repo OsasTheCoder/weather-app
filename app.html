@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demos</title>
+    <style>
+                body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1a64d6;
+            font-size: 36px;
+            margin-bottom: .25em;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 100;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        ul {
+            display: block;
+            margin: 16px;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+            transition: all 200ms ease-in-out;
+        }
+
+        li:hover {
+            background-color: #fff8ec;
+            border-radius: 5px;
+        }
+
+        p {
+            font-family: monospace;
+            font-size: 16px;
+            opacity: .7;
+        }
+
+        button {
+            color: white;
+            background-color: #1a64d6;
+            font-size: 16px;
+            padding: 16px 24px;
+            border: none;
+            border-radius: 30px;
+            transition: all 300ms ease-in-out;
+
+        }
+
+        button:hover {
+            color: #1a64d6;
+            background-color: white;
+            border: 1px solid #1a64d6;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>🌤
+        <br>
+        currently 30° in lagos
+ </h1>
+ <h2>
+    32° / <strong>25°</strong>
+ </h2>
+ <ul>
+    <li>
+        <h3>
+            🌧Tomorrow   
+        </h3>
+        <p>
+            32° / <strong>25°</strong>  
+        </p>
+    </li>
+    <li>
+        <h3>
+            🌥 saturday  
+        </h3>
+        <p>
+            31° / <strong>25°</strong> 
+        </p>
+    </li>
+    <li>
+        <h3>
+            ☀️ sunday 
+        </h3>
+        <p>
+            32° / <strong>25°</strong>  
+        </p>
+    </li>
+ </ul>
+ <button>
+    change city
+ </button>
+ <p>
+    coded by blessing obasohan
+ </p>
+ <script>
+    function changeCity(newCity) {
+        let city = document.querySelector("h1");
+        city.innerHTML = newCity;  
+    }
+
+    function changecity(){
+        let city = prompt("what city do you live in?");
+        let temperature = prompt("what temperature is it?");
+
+        if (temperature >= 2) {
+            changeCity(`😄 <br> currently ${temperature}°c in ${city}`);
+        } else {
+            changeCity(`😞 <br> currently ${temperature}°c in ${city}`);
+        }
+    }
+
+    let changecityButton = document.querySelector("button");
+    changecityButton.addEventListener("click", changecity);
+ </script>
+</body>
+</html>
